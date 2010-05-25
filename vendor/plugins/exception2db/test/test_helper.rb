@@ -1,3 +1,5 @@
+require 'rexml/document'
+
 pwd = File.dirname(__FILE__)
 
 $:.unshift File.join(pwd + '..' + 'lib')
