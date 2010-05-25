@@ -1,0 +1,63 @@
+dumdum
+** [Hoptoad] Notifier 2.2.2 ready to catch errors
+dumdum
+** [Hoptoad] Notifier 2.2.2 ready to catch errors
+dumdum
+** [Hoptoad] Notifier 2.2.2 ready to catch errors
+dumdum
+** [Hoptoad] Notifier 2.2.2 ready to catch errors
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2010-05-25 13:48:11) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES(NULL, '2010-05-25 17:48:11', '2010-05-25 17:48:11')[0m
+Redirected to http://test.host/users/980190963
+Completed in 16ms (DB: 2) | 302 Found [http://test.host/users?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2010-05-25 13:48:11) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 980190962[0m
+Redirected to http://test.host/users
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/users/980190962]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2010-05-25 13:48:11) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 27ms (View: 25, DB: 1) | 200 OK [http://test.host/users/980190962/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2010-05-25 13:48:12) [GET]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2010-05-25 13:48:12) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2010-05-25 13:48:12) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/users/980190962]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2010-05-25 13:48:12) [PUT]
+  Parameters: {"id"=>"980190962", "user"=>{}}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
+Redirected to http://test.host/users/980190962
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/users/980190962?]
