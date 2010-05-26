@@ -1,7 +1,19 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 describe Exception2db do
-  it { should validate_presence_of(:exception) }
+
+ it { should validate_presence_of(:exception) }
+
+
+ it "" do
+  pending "should raise and error when exception is blank and record is saved with false option"
+ end
+ 
+
+ it "" do
+  pending "should raise and error when created_at is blank and record is saved with false option"
+ end
+
 end
 
 

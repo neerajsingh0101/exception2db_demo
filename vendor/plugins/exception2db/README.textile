@@ -49,7 +49,7 @@ class AddException2dbTable < ActiveRecord::Migration
     create_table :exception2dbs do |t|
       t.text :exception, :null => false
 
-      t.timestamps
+      t.datetime :created_at, :null => false
     end
   end
 
