@@ -98,5 +98,13 @@ Exception2dbConfig.set = {
 
 Above code assumes that you have <tt>admin_logged_in?</tt> method defined in <tt>application_controller.rb</tt> . The <tt>is_allowed_to_view</tt> key accepts a proc and controller is provided to you. So you can call any controller method.
 
+h2. How to run tests for this plugin
+
+Stand in the current directory and run. I assume that you have rspec already installed.
+
+<pre>
+spec spec
+</pre>
+
 
 Copyright (c) 2010 neerajdotname, released under the MIT license

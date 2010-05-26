@@ -1,4 +1,7 @@
 class Exception2db < ActiveRecord::Base
+  
+  validates_presence_of :exception
+
   def document
     @document ||= REXML::Document.new(self.exception)
   end
