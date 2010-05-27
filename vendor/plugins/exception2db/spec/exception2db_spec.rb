@@ -24,6 +24,7 @@ describe Exception2db do
     it "#cgi_data"
     it "#parameters"
     it "#action"
+    it "#formatted_backtrace"
 
     specify { subject.top_file_and_line_number.should == '[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10' }
     specify { subject.environment.should == 'production' }
