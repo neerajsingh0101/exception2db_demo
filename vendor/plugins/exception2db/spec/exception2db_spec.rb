@@ -25,12 +25,31 @@ describe Exception2db do
     it "#action"
     it "#formatted_backtrace"
 
-    specify { subject.top_file_and_line_number.should == '[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10' }
-    specify { subject.environment.should == 'production' }
-    specify { subject.url.should == 'http://localhost:3000/exception2db' }
-    specify { subject.controller.should == 'exception2db/main' }
-    specify { subject.error_message.should == 'RuntimeError: 46' }
-    specify { subject.user_agent.should == "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.38 Safari/533.4" }
+    it "#top_file_and_line_number" do
+      subject.top_file_and_line_number.should == '[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10'
+    end
+
+    it "#environment" do
+      subject.environment.should == 'production'
+    end
+
+    it "#url" do
+      subject.url.should == 'http://localhost:3000/exception2db'
+    end
+
+    it "#controller" do
+      subject.controller.should == 'exception2db/main'
+    end
+
+    it "#error_message" do
+      subject.error_message.should == 'RuntimeError: 46'
+    end
+
+    it "#user_agent" do
+      subject.user_agent.should == "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-US)" <<
+      " AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.38 Safari/533.4"
+    end
+
   end
 
 end
