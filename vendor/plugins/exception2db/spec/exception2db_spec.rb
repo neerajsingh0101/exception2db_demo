@@ -41,6 +41,10 @@ describe Exception2db do
       subject.controller.should == 'exception2db/main'
     end
 
+    it "#action" do
+      subject.action.should == 'index'
+    end
+
     it "#error_message" do
       subject.error_message.should == 'RuntimeError: 46'
     end
