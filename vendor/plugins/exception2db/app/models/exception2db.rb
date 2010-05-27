@@ -53,7 +53,6 @@ class Exception2db < ActiveRecord::Base
   
   def top_file_and_line_number
     top_file = REXML::XPath.match(document, '//notice/error/backtrace/line').first
-    
     "#{top_file.attributes['file']}:#{top_file.attributes['number']}"
   end
   
