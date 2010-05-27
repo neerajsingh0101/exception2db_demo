@@ -1,76 +1,77 @@
-      <table class='translations'>
-        <tr>
-          <td class='translation'>Error</td>
-          <td class="phrase">
-            <%= @record.error_message %>
-          </td>
-        </tr>
-        <tr>
-          <td class='translation'>Action</td>
-          <td class='phrase'>
-            <%= @record.controller %>#<%= @record.action %>
-          </td>
-        </tr>
+<table class='translations'>
+  <tr>
+    <td class='translation'>Error</td>
+    <td class="phrase">
+      <%= @record.error_message %>
+    </td>
+  </tr>
 
-        <tr>
-          <td class='translation'>URL</td>
-          <td class='phrase'>
-            <%=link_to(@record.url, @record.url)%>
-          </td>
-        </tr>
+  <tr>
+    <td class='translation'>Action</td>
+    <td class='phrase'>
+      <%= @record.controller %>#<%= @record.action %>
+    </td>
+  </tr>
 
-        <tr>
-          <td class='translation'>Rails environment</td>
-          <td class='phrase'>
-            <%= @record.environment %>
-          </td>
-        </tr>
+  <tr>
+    <td class='translation'>URL</td>
+    <td class='phrase'>
+      <%=link_to(@record.url, @record.url)%>
+    </td>
+  </tr>
 
-        <tr>
-          <td class='translation'>User Agent</td>
-          <td class='phrase'>
-            <%= @record.user_agent %>
-          </td>
-        </tr>
+  <tr>
+    <td class='translation'>Rails environment</td>
+    <td class='phrase'>
+      <%= @record.environment %>
+    </td>
+  </tr>
 
-        <tr>
-          <td class='translation'>Received at</td>
-          <td class='phrase'>
-            <%= @record.created_at.strftime('%B %d, %Y %I:%M:%S %p') %>
-          </td>
-        </tr>
+  <tr>
+    <td class='translation'>User Agent</td>
+    <td class='phrase'>
+      <%= @record.user_agent %>
+    </td>
+  </tr>
 
-        <tr>
-          <td class='translation'>
-            Parameters
-          </th>
-          <td class='phrase'>
-            <%= @record.parameters %>
-          </td>
-        </tr>
+  <tr>
+    <td class='translation'>Received at</td>
+    <td class='phrase'>
+      <%= @record.created_at.strftime('%B %d, %Y %I:%M:%S %p') %>
+    </td>
+  </tr>
 
-        <tr>
-          <td class='translation'>File</td>
-          <td class='phrase'>
-            <%= @record.top_file_and_line_number %>
-          </td>
-        </tr>
+  <tr>
+    <td class='translation'>
+      Parameters
+    </th>
+    <td class='phrase'>
+      <%= @record.parameters %>
+    </td>
+  </tr>
 
-      </table>
+  <tr>
+    <td class='translation'>File</td>
+    <td class='phrase'>
+      <%= @record.top_file_and_line_number %>
+    </td>
+  </tr>
+</table>
 
-    <br />
-      <table class="translations">
-        <%  @record.cgi_data.each_pair do |key,value| %>
-          <tr>
-              <td class='translation'><%=key%></td>
-              <td class='phrase'>
-                <%=value%>
-              </td>
-            </tr>
-        <% end %>
-      </table>
+<br />
 
-      <pre>
-        <%= @record.formatted_backtrace %>
-      </pre>
+<table class="translations">
+  <%  @record.cgi_data.each_pair do |key,value| %>
+    <tr>
+      <td class='translation'><%=key%></td>
+      <td class='phrase'>
+        <%=value%>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<pre>
+  <%= @record.formatted_backtrace %>
+</pre>
 
