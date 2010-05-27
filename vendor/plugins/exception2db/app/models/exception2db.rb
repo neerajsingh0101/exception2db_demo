@@ -19,12 +19,8 @@ class Exception2db < ActiveRecord::Base
   end
   
   def user_agent
-    agent = "N/A"
-    agent_node_xpath = '//notice/request/cgi-data/var[@key="HTTP_USER_AGENT"]'
-    if agent_node = REXML::XPath.first(document, agent_node_xpath)
-      agent = agent_node.text
-    end
-    agent
+    node = REXML::XPath.first(document, '//notice/request/cgi-data/var[@key="HTTP_USER_AGENT"]')
+    node.blank? ? "N/A" : node.text
   end
   
   def parameters

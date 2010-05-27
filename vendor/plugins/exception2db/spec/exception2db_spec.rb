@@ -20,7 +20,6 @@ describe Exception2db do
   context "attributes" do
     subject { Exception2db.create(:exception => $exception_data_xml) }
 
-
     it "#cgi_data"
     it "#parameters"
     it "#action"
