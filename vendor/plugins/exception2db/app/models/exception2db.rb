@@ -5,6 +5,10 @@ class Exception2db < ActiveRecord::Base
   def document
     @document ||= REXML::Document.new(self.exception)
   end
+
+  def error_message
+    REXML::XPath.first(document, '//notice/error/message/text()').to_s
+  end
   
   def cgi_data
     data = {}
@@ -32,10 +36,6 @@ class Exception2db < ActiveRecord::Base
       sum << item
     end
     '{ ' + sum.join(' , ') + ' }'
-  end
-  
-  def error_message
-    REXML::XPath.first(document, '//notice/error/message/text()').to_s
   end
   
   def controller

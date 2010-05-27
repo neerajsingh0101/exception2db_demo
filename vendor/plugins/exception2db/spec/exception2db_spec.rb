@@ -12,8 +12,6 @@ describe Exception2db do
     end
   end
 
-  it "should raise an error when created_at is blank and record is saved with false option"
-
   describe "should be able to create a new record" do
     subject { Exception2db.create(:exception => 'hello world') }
     specify { subject.new_record?.should be_false }
@@ -21,7 +19,17 @@ describe Exception2db do
 
   context "attributes" do
     subject { Exception2db.create(:exception => $exception_data_xml) }
+
+
+    it "#cgi_data"
+    it "#parameters"
+    it "#action"
+
+    specify { subject.environment.should == 'production' }
+    specify { subject.url.should == 'http://localhost:3000/exception2db' }
+    specify { subject.controller.should == 'exception2db/main' }
     specify { subject.error_message.should == 'RuntimeError: 46' }
+    specify { subject.user_agent.should == "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.38 Safari/533.4" }
   end
 
 end
