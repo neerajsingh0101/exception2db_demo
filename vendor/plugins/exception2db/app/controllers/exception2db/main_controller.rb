@@ -23,6 +23,7 @@ class Exception2db::MainController < ApplicationController
   private
 
   def ensure_is_allowed_to_view
+    return true
     return true if Rails.env.development?
     unless Exception2dbConfig.setting[:is_allowed_to_view].call(self)
       render :text => '<h2>not authorized</h2>', :status => :unauthorized

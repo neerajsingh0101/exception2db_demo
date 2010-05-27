@@ -8,3 +8,7 @@ test:
   :adapter: sqlite3
   database: ":memory:"
 
+cucumber:
+  :adapter: sqlite3
+  database: ":memory:"
+

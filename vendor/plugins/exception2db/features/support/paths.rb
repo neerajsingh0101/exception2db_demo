@@ -11,15 +11,9 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
-    when /the list of devices/
-      devices_path
+    when /the list of exception2dbs/
+      '/exception2db'
 
-    when /the login page/
-      new_user_session_path
-
-    when /the dashboard/
-      root_path
-    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
