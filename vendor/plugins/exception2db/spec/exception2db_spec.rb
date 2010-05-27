@@ -20,10 +20,23 @@ describe Exception2db do
   context "attributes" do
     subject { Exception2db.create(:exception => $exception_data_xml) }
 
-    it "#cgi_data"
-    it "#parameters"
-    it "#action"
-    it "#formatted_backtrace"
+    it "#cgi_data should have HTTP_HOST" do
+      subject.cgi_data.fetch('HTTP_HOST').should == 'localhost:3000'
+    end
+
+    it "#cgi_data should have HTTP_ACCEPT_ENCODING" do
+      subject.cgi_data.fetch('HTTP_ACCEPT_ENCODING').should == 'gzip,deflate'
+    end
+
+    it "#parameters" do
+      subject.parameters.should == '{ :action => index , :controller => exception2db/main }'
+    end
+
+    it "#formatted_backtrace" do
+      subject.formatted_backtrace.should ==
+      "<p>[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10:in index</p>" <<
+      "<p>[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in send</p>"
+    end
 
     it "#top_file_and_line_number" do
       subject.top_file_and_line_number.should == '[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10'

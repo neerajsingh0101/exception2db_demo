@@ -108,64 +108,6 @@ $exception_data_xml = %Q{
       <backtrace>
         <line number="10" file="[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb" method="index"/>
         <line number="1331" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb" method="send"/>
-        <line number="1331" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb" method="perform_action_without_filters"/>
-        <line number="617" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/filters.rb" method="call_filters"/>
-        <line number="610" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/filters.rb" method="perform_action_without_benchmark"/>
-        <line number="68" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb" method="perform_action_without_rescue"/>
-        <line number="17" file="[GEM_ROOT]/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb" method="ms"/>
-        <line number="308" file="/usr/local/lib/ruby/1.8/benchmark.rb" method="realtime"/>
-        <line number="17" file="[GEM_ROOT]/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb" method="ms"/>
-        <line number="68" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb" method="perform_action_without_rescue"/>
-        <line number="160" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/rescue.rb" method="perform_action_without_flash"/>
-        <line number="146" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/flash.rb" method="perform_action"/>
-        <line number="532" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb" method="send"/>
-        <line number="532" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb" method="process_without_filters"/>
-        <line number="606" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/filters.rb" method="process"/>
-        <line number="391" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb" method="process"/>
-        <line number="386" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/base.rb" method="call"/>
-        <line number="437" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb" method="call"/>
-        <line number="87" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb" method="dispatch"/>
-        <line number="121" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb" method="_call"/>
-        <line number="130" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb" method="build_middleware_stack"/>
-        <line number="29" file="[GEM_ROOT]/gems/activerecord-2.3.5/lib/active_record/query_cache.rb" method="call"/>
-        <line number="29" file="[GEM_ROOT]/gems/activerecord-2.3.5/lib/active_record/query_cache.rb" method="call"/>
-        <line number="34" file="[GEM_ROOT]/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb" method="cache"/>
-        <line number="9" file="[GEM_ROOT]/gems/activerecord-2.3.5/lib/active_record/query_cache.rb" method="cache"/>
-        <line number="28" file="[GEM_ROOT]/gems/activerecord-2.3.5/lib/active_record/query_cache.rb" method="call"/>
-        <line number="361" file="[GEM_ROOT]/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb" method="call"/>
-        <line number="25" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb" method="call"/>
-        <line number="9" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/head.rb" method="call"/>
-        <line number="24" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/methodoverride.rb" method="call"/>
-        <line number="15" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb" method="call"/>
-        <line number="93" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb" method="call"/>
-        <line number="26" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb" method="call"/>
-        <line number="11" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/lock.rb" method="call"/>
-        <line number="11" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/lock.rb" method="synchronize"/>
-        <line number="11" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/lock.rb" method="call"/>
-        <line number="106" file="[GEM_ROOT]/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb" method="call"/>
-        <line number="31" file="[GEM_ROOT]/gems/rails-2.3.5/lib/rails/rack/static.rb" method="call"/>
-        <line number="46" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/urlmap.rb" method="call"/>
-        <line number="40" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/urlmap.rb" method="each"/>
-        <line number="40" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/urlmap.rb" method="call"/>
-        <line number="17" file="[GEM_ROOT]/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb" method="call"/>
-        <line number="13" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/content_length.rb" method="call"/>
-        <line number="15" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/chunked.rb" method="call"/>
-        <line number="64" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/handler/mongrel.rb" method="process"/>
-        <line number="159" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="process_client"/>
-        <line number="158" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="each"/>
-        <line number="158" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="process_client"/>
-        <line number="285" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="run"/>
-        <line number="285" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="initialize"/>
-        <line number="285" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="new"/>
-        <line number="285" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="run"/>
-        <line number="268" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="initialize"/>
-        <line number="268" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="new"/>
-        <line number="268" file="[GEM_ROOT]/gems/mongrel-1.1.5/lib/mongrel.rb" method="run"/>
-        <line number="34" file="[GEM_ROOT]/gems/rack-1.0.1/lib/rack/handler/mongrel.rb" method="run"/>
-        <line number="111" file="[GEM_ROOT]/gems/rails-2.3.5/lib/commands/server.rb" method=""/>
-        <line number="31" file="/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb" method="gem_original_require"/>
-        <line number="31" file="/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb" method="require"/>
-        <line number="3" file="script/server" method=""/>
       </backtrace>
     </error>
     <request>
