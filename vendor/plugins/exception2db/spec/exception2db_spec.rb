@@ -4,7 +4,7 @@ describe Exception2db do
 
   it { should validate_presence_of(:exception) }
 
-  describe "should raise an error when exception is blank and record is saved with false option" do
+  describe "when exception is blank and record is saved with false option" do
     subject { Exception2db.new(:exception => nil) }
     # Pass 'false' to 'save' in order to skip the validations.
     it "should raise an exception" do
@@ -14,7 +14,9 @@ describe Exception2db do
 
   describe "should be able to create a new record" do
     subject { Exception2db.create(:exception => 'hello world') }
-    specify { subject.new_record?.should be_false }
+    it "should be false for new_record?" do
+      subject.new_record?.should be_false
+    end
   end
 
   context "attributes" do
