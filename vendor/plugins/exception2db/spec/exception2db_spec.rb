@@ -25,6 +25,7 @@ describe Exception2db do
     it "#parameters"
     it "#action"
 
+    specify { subject.top_file_and_line_number.should == '[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10' }
     specify { subject.environment.should == 'production' }
     specify { subject.url.should == 'http://localhost:3000/exception2db' }
     specify { subject.controller.should == 'exception2db/main' }
