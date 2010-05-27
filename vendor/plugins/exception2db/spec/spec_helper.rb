@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 
 require 'rubygems'
+require 'rexml/document'
 
 gem 'rspec', '= 1.3.0'
 require 'spec'
