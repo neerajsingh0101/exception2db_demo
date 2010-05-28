@@ -15,5 +15,7 @@ Feature: Exception2db index page
     When I go to the list of exception2dbs
     When I follow "RuntimeError: 46" within "#container h2"
     Then I should be on exception2db show page with last exception2db
+    Then I should see "[PROJECT_ROOT]/vendor/plugins/exception2db/app/controllers/exception2db/main_controller.rb:10"
+    #TODO Find out how to get 5th tr of a table and then assert the value
 
 

@@ -61,3 +61,7 @@ Processing UsersController#update (for 0.0.0.0 at 2010-05-25 13:48:12) [PUT]
   [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 980190962) [0m
 Redirected to http://test.host/users/980190962
 Completed in 6ms (DB: 1) | 302 Found [http://test.host/users/980190962?]
+dumdum
+** [Hoptoad] Notifier 2.2.2 ready to catch errors
+dumdum
+** [Hoptoad] Notifier 2.2.2 ready to catch errors
