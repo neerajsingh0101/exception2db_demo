@@ -7,6 +7,6 @@ Feature: Exception2db List
     Given an exception2db exists
     When I go to the list of exception2dbs
     Then I should see "exception2db"
-    Then show me the page
+    #Then show me the page
 
 
