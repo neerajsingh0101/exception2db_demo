@@ -8,6 +8,6 @@ Feature: Exception2db List
     When I go to the list of exception2dbs
     Then I should see "RuntimeError: 46" within "#container h2 a"
     Then I should see a link with text "Powered by exception2db" within "#footer" with url "http://github.com/neerajdotname/exception2db"
-    #Then I should see "Report bug" within "#footer a"
+    Then I should see a link with text "Report bug" within "#footer" with url "http://github.com/neerajdotname/exception2db/issues"
 
 
