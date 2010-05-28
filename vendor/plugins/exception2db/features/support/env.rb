@@ -51,26 +51,24 @@ require 'cucumber'
 
 gem 'spork', '= 0.8.3'
 require 'spork'
- 
+
 Spork.prefork do
   ENV["RAILS_ENV"] ||= "cucumber"
   require "#{rails_root}/config/environment"
   require "#{rails_root}/../../config/routes.rb"
-  
+
   require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
   require 'cucumber/rails/world'
   require 'cucumber/rails/active_record'
   require 'cucumber/web/tableish'
 
-  require 'webrat'
-  require 'webrat/core/matchers'
-  
-  Webrat.configure do |config|
-    config.mode = :rails
-    config.open_error_files = false # Set to true if you want error pages to pop up in the browser
-  end
+  require 'capybara/rails'
+  require 'capybara/cucumber'
+  require 'capybara/session'
+  require 'cucumber/rails/capybara_javascript_emulation'
+  Capybara.default_selector = :css
 end
- 
+
 Spork.each_run do
   ActionController::Base.allow_rescue = false
   Cucumber::Rails::World.use_transactional_fixtures = true
