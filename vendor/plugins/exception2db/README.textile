@@ -102,7 +102,7 @@ h2. How to run tests for this plugin
 
 h3. Running rspec tests
 
-Stand in the current directory and run. I assume that you have rspec already installed.
+Stand in the current directory and run following command. I assume that you have rspec already installed.
 
 <pre>
 spec spec
